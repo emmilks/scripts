@@ -1,0 +1,4 @@
+#/bin/sh
+
+mkdir -p $HOME/.local/bin
+cp $HOME/gh/scripts/* $HOME/.local/bin/
