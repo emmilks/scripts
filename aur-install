@@ -1,5 +1,7 @@
 #!/bin/sh
 
+GIT_DIR="$HOME"/Downloads/git
+
 echo "Did you modify /etc/makepkg.conf? [y/n]" 
 read -r input
 
@@ -14,10 +16,11 @@ else
 	exit 1
 fi
 
-mkdir -p "$HOME"/Downloads/git
+mkdir -p "$GIT_DIR"
 
-git clone https://aur.archlinux.org/paru.git
+git clone https://aur.archlinux.org/paru.git "$GIT_DIR"
 cd "$HOME"/Downloads/git/paru || exit
 makepkg -si
+cd "$HOME" || exit
 
 paru -S freetube-bin protontricks pandoc-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk
