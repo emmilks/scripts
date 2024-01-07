@@ -1,5 +1,5 @@
 #!/bin/sh
 
-sudo pacman -S git xdg-user-dirs gvfs htop neofetch steam keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv wlogout newsboat grim swayimg slurp 
+sudo pacman -S git xdg-user-dirs gvfs htop neofetch steam keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp 
 
 xdg-user-dirs-update
