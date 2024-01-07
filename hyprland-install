@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo pacman -S hyprland xdg-desktop-portal-hyprland kitty alacritty bash-completion mako polkit-kde-agent qt5-wayland qt6-wayland nwg-look waybar wofi cliphist thunar thunar-volman ly hyprpaper
+
+sudo systemctl start ly

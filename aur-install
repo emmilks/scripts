@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo "Did you modify /etc/makepkg.conf? [y/n]" 
+read -r input
+
+if [ "$input" = "y" ]; then
+	echo "The script will now proceed"
+elif [ "$input" = "n" ]; then
+	echo "Go edit /etc/makepkg.conf to compile packages faster. Exiting program..."
+	exit 1
+
+else
+	echo "Invalid input. Exiting program..."
+	exit 1
+fi
+
+mkdir -p "$HOME"/Downloads/git
+
+git clone https://aur.archlinux.org/paru.git
+cd "$HOME"/Downloads/git/paru || exit
+makepkg -si
+
+paru -S freetube-bin protontricks pandoc-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk
