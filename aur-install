@@ -23,4 +23,4 @@ cd "$HOME"/Downloads/git/paru || exit
 makepkg -si
 cd "$HOME" || exit
 
-paru -S freetube-bin protontricks pandoc-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk
+paru -S freetube-bin protontricks pandoc-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk wlogout
