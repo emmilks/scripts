@@ -1,8 +1,21 @@
 #!/bin/sh
 
-echo "Use vulkan-radeon when installing steam."
+echo "Main system? [y/n]"
+read -r input
+
+if [ "$input" = "y" ]; then
+	echo "Use vulkan-radeon when installing steam."
+	echo "Installing packages..."
+	sudo pacman -S steam gamescope
+elif [ "$input" = "n" ]; then
+	echo "Ignoring steam since this machine is a laptop."
+else
+	echo "Invalid input. Exiting program..."
+	exit 1
+fi
+
 echo "Installing packages..."
 
-sudo pacman -S git xdg-user-dirs gvfs htop neofetch steam gamescope keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp clang pulsemixer
+sudo pacman -S git xdg-user-dirs gvfs htop neofetch keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp clang pulsemixer
 
 xdg-user-dirs-update
