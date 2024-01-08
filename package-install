@@ -1,5 +1,8 @@
 #!/bin/sh
 
-sudo pacman -S git xdg-user-dirs gvfs htop neofetch steam keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp clang pulsemixer
+echo "Use vulkan-radeon when installing steam."
+echo "Installing packages..."
+
+sudo pacman -S git xdg-user-dirs gvfs htop neofetch steam gamescope keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp clang pulsemixer
 
 xdg-user-dirs-update
