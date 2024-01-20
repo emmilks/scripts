@@ -16,6 +16,6 @@ fi
 
 echo "Installing packages..."
 
-sudo pacman -S git xdg-user-dirs gvfs htop neofetch keepassxc ripgrep npm man man-db firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex mpv newsboat grim swayimg slurp clang pulsemixer swaylock
+sudo pacman -S git xdg-user-dirs gvfs htop neofetch keepassxc ripgrep fd sd dust eza zellij npm man-db man-pages firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex texlive-fontsrecommended mpv newsboat grim swayimg slurp clang pulsemixer swaylock tealdeer urlscan yt-dlp
 
 xdg-user-dirs-update

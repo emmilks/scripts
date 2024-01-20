@@ -1,0 +1,11 @@
+#!/bin/sh
+
+MON="$(hyprctl monitors | head -n1 | awk '{print $2}')"
+
+if [ "$MON" = "DP-1" ]; then
+  MON_SETTINGS="$MON,2560x1440@120,0x0,1"
+else
+  MON_SETTINGS="$MON,1920x1080@60,0x0,1"
+fi
+
+echo "$MON_SETTINGS"

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+find "$HOME"/zet/ -iname "./*.md" -type f -exec sh -c 'pandoc "${0}" -o "$HOME/zet/$(basename ${0%.md}.org)"' {} \;
+rm ./*.md

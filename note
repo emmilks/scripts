@@ -1,0 +1,8 @@
+#!/bin/sh
+
+TIME_STAMP=$(isosec)
+FILE_NAME=$(echo "$TIME_STAMP"--"$1"__"$2" | tr " " "_")
+NOTE_DIR="$HOME"/zet/
+NOTE="$NOTE_DIR"/"$FILE_NAME".md
+
+"$EDITOR" "$NOTE"
