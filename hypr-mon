@@ -1,6 +1,7 @@
 #!/bin/sh
 
 MON="$(hyprctl monitors | head -n1 | awk '{print $2}')"
+HYPR_CONF="$HOME"/.config/hypr/hyprland.conf
 
 if [ "$MON" = "DP-1" ]; then
   MON_SETTINGS="$MON,2560x1440@120,0x0,1"
@@ -8,4 +9,5 @@ else
   MON_SETTINGS="$MON,1920x1080@60,0x0,1"
 fi
 
-echo "$MON_SETTINGS"
+sed -i "s|monitor=.*|monitor=$MON_SETTINGS|g" "$HYPR_CONF"
+echo "Set monitor to $MON_SETTINGS"
