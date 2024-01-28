@@ -5,16 +5,19 @@ GIT_DIR="$HOME"/Downloads/git
 echo "Did you modify /etc/makepkg.conf? [y/n]" 
 read -r input
 
-if [ "$input" = "y" ]; then
-	echo "The script will now proceed"
-elif [ "$input" = "n" ]; then
-	echo "Go edit /etc/makepkg.conf to compile packages faster. Exiting program..."
-	exit 1
-
-else
-	echo "Invalid input. Exiting program..."
-	exit 1
-fi
+case "$input" in
+	y)
+		echo "The script will now proceed"
+		;;
+	n)
+		echo "Go edit /etc/makepkg.conf to compile packages faster. Exiting program..."
+		exit 1
+		;;
+	*)
+		echo "Invalid input. Exiting program..."
+		exit 1
+		;;
+esac
 
 mkdir -p "$GIT_DIR"
 
@@ -25,4 +28,4 @@ cd "$HOME" || exit
 
 echo "Installing packages..."
 
-paru -S freetube-bin protontricks pandoc-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk wlogout xcursor-breeze
+paru -S freetube-bin protontricks pandoc-bin pandoc-crossref-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk wlogout xcursor-breeze

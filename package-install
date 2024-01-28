@@ -3,19 +3,23 @@
 echo "Main system? [y/n]"
 read -r input
 
-if [ "$input" = "y" ]; then
-	echo "Use vulkan-radeon when installing steam."
-	echo "Installing packages..."
-	sudo pacman -S steam gamescope
-elif [ "$input" = "n" ]; then
-	echo "Ignoring steam since this machine is a laptop."
-else
-	echo "Invalid input. Exiting program..."
-	exit 1
-fi
+case "$input" in
+	y)
+		echo "Use vulkan-radeon when installing steam."
+		echo "Installing packages..."
+		sudo pacman -S steam gamescope
+		;;
+	n)
+		echo "Ignoring steam since this machine is a laptop."
+		;;
+	*)
+		echo "Invalid input. Exiting program..."
+		exit 1
+		;;
+esac
 
 echo "Installing packages..."
 
-sudo pacman -S git xdg-user-dirs python-lsp-server python-server-black gvfs htop neofetch keepassxc ripgrep fd sd dust eza zellij npm man-db man-pages firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex texlive-fontsrecommended mpv newsboat grim swayimg slurp clang pulsemixer swaylock tealdeer urlscan yt-dlp
+sudo pacman -S lua-language-server keychain git xdg-user-dirs python-lsp-server python-server-black gvfs htop neofetch keepassxc ripgrep fd sd dust eza zellij npm man-db man-pages firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex texlive-fontsrecommended mpv newsboat grim swayimg slurp clang pulsemixer swaylock tealdeer urlscan yt-dlp
 
 xdg-user-dirs-update
