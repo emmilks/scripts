@@ -20,6 +20,6 @@ esac
 
 echo "Installing packages..."
 
-sudo pacman -S lua-language-server keychain git xdg-user-dirs python-lsp-server python-server-black gvfs htop neofetch keepassxc ripgrep fd sd dust eza zellij npm man-db man-pages firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex texlive-fontsrecommended mpv newsboat grim swayimg slurp clang pulsemixer swaylock tealdeer urlscan yt-dlp
+sudo pacman -S lua-language-server keychain git xdg-user-dirs python-lsp-server python-server-black gvfs htop neofetch keepassxc ripgrep fd sd dust eza zellij npm man-db man-pages firefox stow thunderbird rsync marksman helix neovim jq yq qt5ct qt6ct kvantum zathura zathura-pdf-poppler texlive-latexrecommended texlive-xetex texlive-fontsrecommended mpv newsboat grim swayimg slurp clang pulsemixer swaylock tealdeer urlscan yt-dlp yazi skim
 
 xdg-user-dirs-update
