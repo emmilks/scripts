@@ -28,4 +28,4 @@ cd "$HOME" || exit
 
 echo "Installing packages..."
 
-paru -S freetube-bin protontricks pandoc-bin pandoc-crossref-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk wlogout xcursor-breeze
+paru -S udunits freetube-bin protontricks pandoc-bin pandoc-crossref-bin shellcheck-bin rstudio-desktop-bin nwg-look-bin gruvbox-dark-gtk gruvbox-dark-icons-gtk wlogout xcursor-breeze
